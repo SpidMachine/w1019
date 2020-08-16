@@ -9,8 +9,8 @@
                 <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item<?= $controllerType == 'Phonebook' ? ' active' : '' ?>">
-                    <a class="nav-link" href="?action=show&type=Phonebook">Phonebook</a>
+                <li class="nav-item<?= $controllerType == 'car' ? ' active' : '' ?>">
+                    <a class="nav-link" href="?action=show&type=car">car</a>
                 </li>
                 <li class="nav-item<?= $controllerType == 'guestbook' ? ' active' : '' ?>">
                     <a class="nav-link" href="?action=show&type=guestbook">Гостевая книга</a>
