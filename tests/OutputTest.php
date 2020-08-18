@@ -6,7 +6,6 @@ class OutputTest extends TestCase
 {
     public function test()
     {
-        $this->GroupController("`group`");
-        echo "`group`";
+        $this->getActualOutput();
     }
 }
