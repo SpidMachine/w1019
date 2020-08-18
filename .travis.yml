@@ -5,13 +5,8 @@ php:
   - "7.4"
   - nightly
 
-jobs:
-  allow_failures:
-    - php: "7.3"
-    - php: nightly
-
-install:
-  - travis_retry composer install --no-interaction --prefer-dist --no-progress --no-suggest
+before_script:
+  - composer install --no-interaction
 
 script:
-  - composer ci:test
+  - vendor/bin/phpunit
