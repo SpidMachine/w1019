@@ -1,11 +1,11 @@
 .img {
-    width: 50px;
+    width: 150px;
 }
 
-.img:hover {
+.img :hover {
     width: 500px;
     z-index: 1;
     position: absolute;
-    left: 5px;
-    top: 5px;
+    left: 500px;
+    top: 500px;
 }
