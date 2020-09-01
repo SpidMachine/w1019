@@ -7,10 +7,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                    <a class="nav-link" href="?action=loginform&type=auth">Login</a>
+                    <a class="nav-link" href="?action=loginform&type=auth">Авторизация</a>
                 </li>
                 <span class="navbar-text">
                     <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] . '(' . $_SESSION['user']['name'] . ')' : '' ?>
