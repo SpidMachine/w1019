@@ -49,16 +49,17 @@ class UsersController extends AbstractTableController
             ->setFolder('users')
             ->addData([
                 'groupNames' => $this->table->getGroupNames()
-            ]);;
+            ]);
     }
     public function actionAdd(array $data)
     {
-        $data['post']['password'] = sha1($data['post']['password'] . Config::SALT);
+//        $data['post']['password'] = md5($data['post']['password'] . Config::SALT);
         parent::actionAdd($data);
     }
+
     public function actionEdit(array $data)
     {
-        $data['post']['password'] = sha1($data['post']['password'] . Config::SALT);
+//        $data['post']['password'] = md5($data['post']['password'] . Config::SALT);
         parent::actionEdit($data);
     }
 }

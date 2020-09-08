@@ -18,11 +18,16 @@ class UsersModel extends DbEntity
     {
         return $this
             ->reset()
-            ->setSelect('`users`.`id`, `users`.`login`, `users`.`password`,  `group`.`name` AS group_id, `users`.`FIO`')
+            ->setSelect('`users`.`id`, `users`.`login`, `users`.`password`,  `group`.`name` AS group_id, `users`.`FIO`, `users`.`city`, `users`.`phone`')
             ->setFrom('`users`,`group`')
             ->setWhere('`users`.`group_id` = `group`.`id`')
             ->setOrderBy('`users`.`id`')
             ->getPage($page);
+    }
+
+    public function getGroupIdByCode($cod)
+    {
+        return $this->runSQL("SELECT `id` FROM `group` WHERE `cod` = '$cod'") [0]['id'];
     }
 
     public function getGroupNames()

@@ -34,4 +34,5 @@ class TableEdited extends Table
         $this->data = $str;
         return $this;
     }
+
 }

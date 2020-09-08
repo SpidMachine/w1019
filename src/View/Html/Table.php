@@ -2,12 +2,16 @@
 
 namespace View\Html;
 
+ class Car {
+    private  $id;
+    private $name;
+    private $dateOfIssue;
+}
 class Table extends AbstractTag
 {
     protected $table;
     protected $data;
     protected $headers;
-
 
     public function __construct()
     {
@@ -21,7 +25,8 @@ class Table extends AbstractTag
         return $this;
     }
 
-    public function setHeaders(array $headers) {
+    public function setHeaders(array $headers)
+    {
         $str = '';
 
         foreach ($headers as $value) {

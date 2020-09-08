@@ -12,9 +12,9 @@
             <li class="nav-item<?= $controllerType == 'car' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=car">Автомобили</a>
             </li>
-            <li class="nav-item<?= $controllerType == 'guestbook' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=guestbook">Гостевая книга</a>
-            </li>
+<!--            <li class="nav-item--><?//= $controllerType == 'guestbook' ? ' active' : '' ?><!--">-->
+<!--                <a class="nav-link" href="?action=show&type=guestbook">Гостевая книга</a>-->
+<!--            </li>-->
             <li class="nav-item<?= $controllerType == 'group' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=group">Тип пользователя</a>
             </li>
