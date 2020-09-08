@@ -34,7 +34,7 @@ foreach ($table as &$value) {
         <?php
                     echo '<div class="nav-item">';
         foreach ($table as $key => $row) {
- echo '<div class="card mb-3" style="max-width: 540px;">'."\n";
+ echo '<div class="card mb-3" style="max-width: 740px;">'."\n";
     echo '<div class="row no-gutters">'."\n";
         echo '<div class="col-md-4">'."\n";
             echo '<img src="" class="card-img">'."\n";
@@ -46,13 +46,11 @@ foreach ($table as &$value) {
                         echo $row['name_of_car'];
                     echo '</h5>'."\n";
                     echo '<p class="card-text">'."\n";
-                        echo $row['year_of_issue'].', '
-                        .$row['color'].', '
-                        .$row['mileage'].', '
-                        .$row['fuel_type'].', '
-                        .$row['body_type'].', '
-                        .$row['transmission'].', '
-                        .$row['drive_unit'];
+                    foreach ($row as $k => $v) {
+                        if (!in_array($k,['image','name_of_car','id','users_id'])) {
+                            echo $v . ', ';
+                        }
+                    }
                     echo '</p>'."\n";
                     echo '<p class="card-text"><small class="text-muted">';
                     echo 'Last updated 3 mins ago'."\n";
@@ -62,7 +60,7 @@ foreach ($table as &$value) {
     echo '</div>';
  echo '</div>';
 
-            if ($key + 1) {
+            if (($key + 1) % 4 == 0) {
                 echo "</div>\n\n\n";
                 echo '<div class="nav-item">';
             }

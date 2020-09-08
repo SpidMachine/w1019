@@ -39,3 +39,7 @@
 .welcome {
     color: red;
 }
+
+body {
+    background-color: darkgrey;
+}
