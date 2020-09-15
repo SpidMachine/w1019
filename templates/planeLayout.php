@@ -15,6 +15,12 @@
 
 
 <?php
+if (!empty($_SESSION['errors'])) {
+    foreach ($_SESSION['errors'] as $error) {
+        echo "<div class='alert alert-danger' role='alert'>$error</div>";
+    }
+    unset($_SESSION['errors']);
+}
 $this->body();
 ?>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

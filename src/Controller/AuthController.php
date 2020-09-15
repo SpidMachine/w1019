@@ -37,7 +37,7 @@ class AuthController extends AbstractController
             ->view
             ->setFolder('login')
             ->setTemplate('loginForm')
-            ->setLayout('planeLayout')
+            ->setLayout('mainLayout')
             ->addData(['action' => "?action=login&type=" . $this->getClassName()]);
     }
 
@@ -48,10 +48,12 @@ class AuthController extends AbstractController
             ->table
             ->checkUser(
                 $httpData['post']['login'],
-                sha1($httpData['post']['password'] . Config::SALT)
+//                sha1($httpData['post']['password'] . Config::SALT)
+                $httpData['post']['password']
             );
 
         if (empty($kod)) {
+            $_SESSION['errors'][] = "Не верный логин или пароль!";
             $this->redirect("?action=loginform&type=" . $this->getClassName());
         } else {
             $_SESSION['user'] = $kod;

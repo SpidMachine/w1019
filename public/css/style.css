@@ -36,10 +36,8 @@
     margin: 20px;
 }
 
-.welcome {
-    color: red;
+body {
+    background-color: #575757;
 }
 
-body {
-    background-color: darkgrey;
-}
+

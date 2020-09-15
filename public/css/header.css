@@ -8,8 +8,9 @@
     color: #cdcdcd;
 }
 
-.nav-item :hover {
+.nav-item :visited {
     background: #9a9a9a;
     color: white;
     border-radius: 5px;
 }
+

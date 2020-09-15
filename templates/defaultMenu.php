@@ -10,6 +10,9 @@
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                 <a class="nav-link" href="/">Главная<span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item<?= $controllerType == 'car' ? ' active' : '' ?>">
+                <a class="nav-link" href="?action=show&type=car">Автомобили</a>
+            </li>
             <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=loginform&type=auth">Авторизация</a>
             </li>

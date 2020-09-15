@@ -1,5 +1,6 @@
 <style>
     .welcome {
+        color: #717171;
         text-align: center;
         margin-top: 100px;
         width: 50%;

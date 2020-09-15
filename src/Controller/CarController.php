@@ -11,7 +11,7 @@ class CarController extends AbstractTableController {
     public function __construct(View $view)
     {
         parent::__construct($view);
-        $this->view->setFolder('products');
+        $this->view->setFolder('Products');
     }
 
     public function actionAdd(array $data)

@@ -12,10 +12,10 @@ use View\Html\Html;
 
 
 
-foreach ($table as &$value) {
-    $ext = pathinfo($value['image'], PATHINFO_EXTENSION);
-    $value['image'] = "<img class='img' src='images/products/$value[id].$ext'>";
-}
+//foreach ($table as &$value) {
+//    $ext = pathinfo($value['image'], PATHINFO_EXTENSION);
+//    $value['image'] = "<img class='img' src='images/products/$value[id].$ext'>";
+//}
 
 
 //        echo Html::create('TableEdited')
@@ -25,14 +25,14 @@ foreach ($table as &$value) {
 //        ->setClass('table')
 //        ->html();
 
-//    include_once "outPutBlocks.php";
+include_once "outPutBlocks.php";
 
- echo Html::create('TableEdited')
-     ->setControllerType($type)
-     ->setHeaders($comments)
-     ->data($table)
-     ->setClass('table')
-     ->html();
+// echo Html::create('TableEdited')
+//     ->setControllerType($type)
+//     ->setHeaders($comments)
+//     ->data($table)
+//     ->setClass('table')
+//     ->html();
 
 //include_once "outPutBlocks.php";
 
@@ -60,7 +60,6 @@ $form = Html::create('Form')
 //);
 
 echo Html::create("Pagination")
-    ->setStyle('text-align="centre"')
     ->setClass('pagination')
     ->setControllerType($type)
     ->setPageCount($pageCount)

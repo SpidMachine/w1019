@@ -6,7 +6,7 @@
     <form action="<?=$action?>" method="post">
         <div class="form-group">
             <label for="exampleInputEmail1">Логин</label>
-            <input type="text" class="form-control" name="login">
+                <input type="text" class="form-control" name="login">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Пороль</label>
@@ -15,3 +15,15 @@
         <button type="submit" class="btn btn-primary">Принять</button>
     </form>
 </div>
+
+<script>
+    var email = document.getElementById("mail");
+
+    email.addEventListener("input", function (event) {
+        if (email.validity.typeMismatch) {
+            email.setCustomValidity("I expect an e-mail, darling!");
+        } else {
+            email.setCustomValidity("");
+        }
+    });
+</script>
