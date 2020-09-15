@@ -7,9 +7,6 @@
         <label>
             <input type="text" name="FIO" placeholder="FIO">
         </label><br>
-        <label>
-            <input type="email" name="email" placeholder="email">
-        </label><br>
         <input type="submit" value="ok">
     </form>
     <div id="response"></div>

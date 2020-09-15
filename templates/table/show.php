@@ -8,12 +8,6 @@ use View\Html\Html;
  * @var string $type Имя контроллера
  */
 
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
-
 echo Html::create('TableEdited')
     ->setControllerType($type)
     ->setHeaders($comments)
@@ -39,5 +33,11 @@ $form->addContent(
         ->setValue('OK')
         ->html()
 );
+
+echo Html::create("Pagination")
+    ->setClass('pagination')
+    ->setControllerType($type)
+    ->setPageCount($pageCount)
+    ->html();
 
 echo $form->html();

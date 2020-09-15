@@ -25,8 +25,6 @@ foreach ($table as &$value) {
 //        ->setClass('table')
 //        ->html();
 
-//    include_once "outPutBlocks.php";
-
  echo Html::create('TableEdited')
      ->setControllerType($type)
      ->setHeaders($comments)
@@ -34,30 +32,28 @@ foreach ($table as &$value) {
      ->setClass('table')
      ->html();
 
-//include_once "outPutBlocks.php";
-
 $form = Html::create('Form')
     ->setMethod('POST')
     ->setAction("?action=add&type=$type")
     ->setClass('form');
 
 
-//foreach ($fields as $field) {
-//    if ($field == 'image') {
-//        $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//        $form->addContent(Html::create('input')->setName($field)->setId($field)->setType('file')->html());
-//    } else {
-//        $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//        $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-//    }
-//}
-//
-//$form->addContent(
-//    Html::create('Input')
-//        ->setType('submit')
-//        ->setValue('OK')
-//        ->html()
-//);
+foreach ($fields as $field) {
+   if ($field == 'image') {
+       $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
+       $form->addContent(Html::create('input')->setName($field)->setId($field)->setType('file')->html());
+   } else {
+       $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
+       $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
+   }
+}
+
+$form->addContent(
+   Html::create('Input')
+       ->setType('submit')
+       ->setValue('OK')
+       ->html()
+);
 
 echo Html::create("Pagination")
     ->setStyle('text-align="centre"')
