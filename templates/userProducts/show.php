@@ -45,21 +45,28 @@ foreach ($table as &$value) {
         echo '<div class="col-md-8">'."\n";
         echo '<div class="card-body">'."\n";
         echo '<h5 class="card-title">'."\n";
-        echo '<a href="?action=show&type=car" style="text-decoration: none; color: black;">';
+        echo '<a href="?action=show&type=carDis" style="text-decoration: none; color: black;">';
         echo $row['name_of_car'];
         echo '</a>';
         echo '</h5>'."\n";
         echo '<p class="card-text">'."\n";
-
+        $sup = '<sup>3</sup>';
         foreach ($row as $k => $v) {
             if (!in_array($k,['image','name_of_car','id','users_id','price'])) {
-                echo $v . ', ';
+                switch ($k) {
+                        case "year_of_issue" : echo $v . ' г, ';
+                    break;
+                        case "condition_car": echo $v . ', ';
+                    break;
+                        case "mileage" : echo $v . ' км , ';
+                    break;
+                        case "volume" : echo $v . ' см' . $sup . '... ';
+                }
             }
         }
-
         echo '</p>'."\n";
         echo '<h5 style="text-align: right">';
-        echo $row['price'];
+        echo $row['price'] . ' руб';
         echo '</h5>';
         echo '<p class="card-text"><small class="text-muted">';
         echo 'Last updated 3 mins ago'."\n";
@@ -101,12 +108,14 @@ $form = Html::create('Form')
 //        ->html()
 //);
 
+echo "<div class='page'>";
 echo Html::create("Pagination")
-    ->setStyle('text-align="centre"')
     ->setClass('pagination')
     ->setControllerType($type)
     ->setPageCount($pageCount)
     ->html();
+echo "</div>";
 
 echo $form->html();
+
 ?>

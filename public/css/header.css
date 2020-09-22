@@ -1,16 +1,27 @@
 #header {
-    background-color: gray;
+    background-color: #383838;
     box-shadow: 0 5px 10px rgba(0,0,0,0.25);
     color: #9e9e9e;
+    text-align: right;
 }
 
-.nav-link :hover {
+#headerAdm {
+    background-color: #383838;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+    color: #9e9e9e;
+    text-align: right;
+}
+
+.nav-link {
     color: #cdcdcd;
 }
 
-.nav-item :visited {
-    background: #9a9a9a;
-    color: white;
+.nav-link:hover {
+    color: #0065fc;
+}
+
+.nav-item {
+    color: #232323;
     border-radius: 5px;
 }
 

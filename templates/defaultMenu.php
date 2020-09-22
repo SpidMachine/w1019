@@ -6,19 +6,24 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" style="margin-left: 150px">
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=usercar"><h5>CarMarket</h5><span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="?action=show&type=usercar"><h5>CarMarket</h5><span
+                            class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=loginform&type=auth">Авторизация</a>
-            </li>
-            <li class="nav-item<?= $controllerType == 'add' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=signup">Регистрация</a>
-            </li>
-            <span class="navbar-text">
+        </ul>
+        <div>
+            <ul class="navbar-nav mr-auto"  style="margin-right: 150px">
+                <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
+                    <a class="nav-link" href="?action=loginform&type=auth">Авторизация</a>
+                </li>
+                <li class="nav-item<?= $controllerType == 'add' ? ' active' : '' ?>">
+                    <a class="nav-link" href="?action=show&type=signup">Регистрация</a>
+                </li>
+                <span class="navbar-text">
                     <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] . '(' . $_SESSION['user']['name'] . ')' : '' ?>
                 </span>
-        </ul>
+            </ul>
+        </div>
     </div>
 </nav>

@@ -4,13 +4,14 @@ namespace Controller;
 
 use View\View;
 
-class CarDiscriptionController extends AbstractTableController
+class CarDisController extends AbstractTableController
 {
+    protected  $tableName = "car";
 
     public function __construct(View $view)
     {
         parent::__construct($view);
-        $this->view->setFolder('carDiscription');
+        $this->view->setFolder('carDis');
     }
 
 }

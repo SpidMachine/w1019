@@ -1,5 +1,10 @@
 .img {
-    width: 200px !important;
+    cursor:pointer;
+    width: 150px
+}
+
+.ing :focus {
+    width: auto;
 }
 
 .img :hover {

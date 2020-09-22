@@ -36,10 +36,6 @@
     margin: 20px;
 }
 
-body {
-    background-color: #575757;
-}
-
 .welcome {
     color: #717171;
     text-align: center;
@@ -50,5 +46,20 @@ body {
 }
 
 .container {
-    margin-top: 20px;
+    margin-top: 50px;
+}
+
+.page {
+    text-align: center;
+    color: red;
+
+}
+
+#userMoves{
+    text-align: right;
+
+}
+
+.addBtn {
+    background-color: rgba(163, 217, 255, 0.4) !important;
 }

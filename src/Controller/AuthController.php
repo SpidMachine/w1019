@@ -55,7 +55,10 @@ class AuthController extends AbstractController
         if (empty($kod)) {
             $_SESSION['errors'][] = "Не верный логин или пароль!";
             $this->redirect("?action=loginform&type=" . $this->getClassName());
-        } else {
+        } elseif (empty($httpData['post']['login'])) {
+
+        }
+        else {
             $_SESSION['user'] = $kod;
             $this->redirect('/');
         }
