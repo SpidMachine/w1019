@@ -61,5 +61,6 @@
 }
 
 .addBtn {
-    background-color: rgba(163, 217, 255, 0.4) !important;
+    background-color: rgba(1, 90, 153, 0.4) !important;
+    border: 1px solid black;
 }

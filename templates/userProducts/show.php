@@ -36,7 +36,7 @@ foreach ($table as &$value) {
     <?php
     echo '<div class="nav-item">';
     foreach ($table as $key => $row) {
-        echo '<div class="card mb-3" style="max-width: 65%; background-color: gainsboro;">'."\n";
+        echo '<div class="card mb-3" style="max-width: 65%; background-color: #fff; border: 1px solid grey; !important">'."\n";
         echo '<div class="row no-gutters">'."\n";
         echo '<div class="col-md-4">'."\n";
         echo '<img class="card-img">'."\n";
@@ -45,7 +45,7 @@ foreach ($table as &$value) {
         echo '<div class="col-md-8">'."\n";
         echo '<div class="card-body">'."\n";
         echo '<h5 class="card-title">'."\n";
-        echo '<a href="?action=show&type=carDis" style="text-decoration: none; color: black;">';
+        echo '<a href="?action=showcar&type=carDis&id=' . $row['id'] . '" style="text-decoration: none; color: black;">';
         echo $row['name_of_car'];
         echo '</a>';
         echo '</h5>'."\n";
