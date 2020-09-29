@@ -55,12 +55,16 @@ $form->addContent(
        ->html()
 );
 
-echo Html::create("Pagination")
-    ->setStyle('text-align="centre"')
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
+if ($pageCount > 1) {
+    echo "<div class='contPag'>";
+    echo TexLab\Html\Html::pagination()
+        ->setPageCount($pageCount)
+        ->setCurrentPage($currentPage)
+        ->setClass('pagination')
+        ->setUrlPrefix("?action=show&type=$type")
+        ->html();
+    echo "</div>";
+}
 
 echo $form->html();
 ?>

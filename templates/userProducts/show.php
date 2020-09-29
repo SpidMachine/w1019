@@ -9,14 +9,10 @@ use View\Html\Html;
  * @var array $table
  */
 
-
-
-
 foreach ($table as &$value) {
     $ext = pathinfo($value['image'], PATHINFO_EXTENSION);
     $value['image'] = "<img class='img' src='images/products/$value[id].$ext'>";
 }
-
 
 //        echo Html::create('TableEdited')
 //        ->setControllerType($type)
@@ -36,16 +32,16 @@ foreach ($table as &$value) {
     <?php
     echo '<div class="nav-item">';
     foreach ($table as $key => $row) {
-        echo '<div class="card mb-3" style="max-width: 65%; background-color: #fff; border: 1px solid grey; !important">'."\n";
+        echo '<div class="card mb-3" style="max-width: 65%; background-color: #fff; border-right: none; border-left: none">'."\n";
         echo '<div class="row no-gutters">'."\n";
         echo '<div class="col-md-4">'."\n";
-        echo '<img class="card-img">'."\n";
-        echo $row['image'];
+        echo '<a ><img class="card-img">'."\n";
+        echo $row['image'] . '</img></a>';
         echo '</div>'."\n";
         echo '<div class="col-md-8">'."\n";
         echo '<div class="card-body">'."\n";
         echo '<h5 class="card-title">'."\n";
-        echo '<a href="?action=showcar&type=carDis&id=' . $row['id'] . '" style="text-decoration: none; color: black;">';
+        echo '<a href="?action=&type=carDis&id=' . $row['id'] . '" style="text-decoration: none; color: black;">';
         echo $row['name_of_car'];
         echo '</a>';
         echo '</h5>'."\n";
@@ -108,13 +104,22 @@ $form = Html::create('Form')
 //        ->html()
 //);
 
-echo "<div class='page'>";
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
-echo "</div>";
+//echo Html::create("Pagination")
+//    ->setClass('pagination')
+//    ->setControllerType($type)
+//    ->setPageCount($pageCount)
+//    ->html();
+
+if ($pageCount > 1) {
+    echo "<div class='contPag'>";
+    echo TexLab\Html\Html::pagination()
+        ->setPageCount($pageCount)
+        ->setCurrentPage($currentPage)
+        ->setClass('pagination')
+        ->setUrlPrefix("?action=show&type=$type")
+        ->html();
+    echo "</div>";
+}
 
 echo $form->html();
 

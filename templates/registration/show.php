@@ -7,6 +7,9 @@
         <label>
             <input type="text" name="FIO" placeholder="FIO">
         </label><br>
+        <label>
+            <input type="email" name="email" placeholder="email">
+        </label><br>
         <input type="submit" value="ok">
     </form>
     <div id="response"></div>
@@ -25,12 +28,12 @@
         xhr.send();
 
         xhr.onload = function () {
-            if (xhr.status === 200) {
+            if (xhr.status == 200) {
                 // console.log(xhr.response)
                 var obj = JSON.parse(xhr.response);
                 document.getElementById('response').innerHTML = obj.response;
                 let input = document.getElementById('login');
-                if (obj.response === "Yes") {
+                if (obj.response == "Yes") {
                     input.classList.add("logAlert")
                 } else {
                     input.classList.remove("logAlert")

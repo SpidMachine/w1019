@@ -2,10 +2,7 @@
     cursor: pointer;
     width: 200px;
     padding-left: 10px;
-}
-
-.img :focus {
-    width: auto;
+    position: relative;
 }
 
 .img :hover {
@@ -14,4 +11,16 @@
     position: absolute;
     left: 500px;
     top: 500px;
+}
+
+#carDisFlex {
+    display: flex;
+}
+
+.carDisImg {
+    margin-left: 143px;
+    margin-bottom: 73px;
+    width: 475px;
+    cursor: pointer;
+    position: relative;
 }

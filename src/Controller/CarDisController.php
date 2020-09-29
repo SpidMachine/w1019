@@ -29,10 +29,10 @@ class CarDisController extends AbstractController
         );
     }
 
-    public function actionShowCar(array $data) {        
+    public function action(array $data) {
         $this
         ->view
-        ->setTemplate('showdis')
+        ->setTemplate('show')
         ->setData([
             'table' => $this->table->getCar($data['get']['id'])
         ]);

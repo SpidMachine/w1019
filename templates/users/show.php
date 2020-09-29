@@ -9,13 +9,6 @@ use View\Html\Html;
  */
 // print_r($groupNames);
 
-
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
-
 echo Html::create('TableEdited')
     ->setControllerType($type)
     ->setHeaders($comments)
@@ -39,6 +32,17 @@ foreach ($fields as $field) {
         $form->addContent((new \TexLab\Html\Select())->setName($field)->setId($field)->setData($groupNames)->html());
         $form->addContent('<br>');
     }
+}
+
+if ($pageCount > 1) {
+    echo "<div class='contPag'>";
+    echo TexLab\Html\Html::pagination()
+        ->setPageCount($pageCount)
+        ->setCurrentPage($currentPage)
+        ->setClass('pagination')
+        ->setUrlPrefix("?action=show&type=$type")
+        ->html();
+    echo "</div>";
 }
 
 $form->addContent(

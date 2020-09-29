@@ -25,57 +25,7 @@ class NewAdController extends CarController
         $error = false;
 
         if (empty($data['post']['name_of_car'])) {
-            $_SESSION['errors'][] = 'Надо задать имя автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['year_of_issue'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['condition_car'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['mileage'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['fuel_type'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['volume'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['color'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['body_type'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['transmission'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['drive_unit'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
-            $error = true;
-        }
-
-        if (empty($data['post']['price'])) {
-            $_SESSION['errors'][] = 'Надо задать год автомобиля';
+            $_SESSION['errors'][] = 'Есть не заполненые поля!';
             $error = true;
         }
 

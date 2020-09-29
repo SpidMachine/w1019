@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=usercar" style="margin-left: 150px"><h5>CarMarket</h5><span
+                <a class="nav-link" href="?action=show&type=usercar" style="margin-left: 368px"><h5>CarMarket</h5><span
                             class="sr-only">(current)</span></a>
             </li>
             <!-- <li class="nav-item<?= $controllerType == 'car' ? ' active' : '' ?>">
