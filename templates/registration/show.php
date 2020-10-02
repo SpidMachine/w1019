@@ -1,18 +1,39 @@
-<div class="container">
-    <form action="?type=reg&action=add" method="post" id="loginform">
-        <label for="login"></label><input type="text" name="login" placeholder="login" id="login"><br>
-        <label>
-            <input type="text" name="password" placeholder="password">
-        </label><br>
-        <label>
-            <input type="text" name="FIO" placeholder="FIO">
-        </label><br>
-        <label>
-            <input type="email" name="email" placeholder="email">
-        </label><br>
-        <input type="submit" value="ok">
-    </form>
-    <div id="response"></div>
+<div class="nav-item">
+    <div class="containerLog">
+        <form action="?type=reg&action=add" method="post" id="loginform">
+            <div class="formGroup">
+                <h1>Регистрация</h1>
+                <label>
+                    <input type="text" name="login" placeholder="Логин" class="form-control">
+                </label><br>
+            </div>
+            <div class="formGroup">
+                <label>
+                    <input type="text" class="form-control" name=" password" placeholder="Пороль">
+                </label><br>
+            </div>
+            <div class="formGroup">
+                <label>
+                    <input type="text" class="form-control" name="city" placeholder="Город">
+                </label><br>
+            </div>
+            <div class="formGroup">
+                <label>
+                    <input type="text" class="form-control" name="FIO" placeholder="Ваше имя">
+                </label><br>
+            </div>
+            <div class="formGroup">
+                <label>
+                    <input type="text" class="form-control" name="phone" placeholder="Номер телефона">
+                </label><br>
+            </div>
+            <div class="formGroup">
+                <label>
+                    <input type="submit" class="btn btn-secondary btn-lg btn-block" value="Зарегестрироваться">
+                </label>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script>

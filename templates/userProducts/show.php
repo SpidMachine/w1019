@@ -14,19 +14,6 @@ foreach ($table as &$value) {
     $value['image'] = "<img class='img' src='images/products/$value[id].$ext'>";
 }
 
-//        echo Html::create('TableEdited')
-//        ->setControllerType($type)
-//        ->setHeaders($comments)
-//        ->data($table)
-//        ->setClass('table')
-//        ->html();
-
-//  echo Html::create('TableEdited')
-//      ->setControllerType($type)
-//      ->setHeaders($comments)
-//      ->data($table)
-//      ->setClass('table')
-//      ->html();
 ?>
 <div class="container">
     <?php
@@ -62,10 +49,9 @@ foreach ($table as &$value) {
         }
         echo '</p>'."\n";
         echo '<h5 style="text-align: right">';
-        echo $row['price'] . ' руб';
+        echo  $row['price'] . ' руб';
         echo '</h5>';
         echo '<p class="card-text"><small class="text-muted">';
-        echo 'Last updated 3 mins ago'."\n";
         echo '</small></p>'."\n";
         echo '</div>';
         echo '</div>';
@@ -85,30 +71,6 @@ $form = Html::create('Form')
     ->setMethod('POST')
     ->setAction("?action=add&type=$type")
     ->setClass('form');
-
-
-//foreach ($fields as $field) {
-//    if ($field == 'image') {
-//        $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//        $form->addContent(Html::create('input')->setName($field)->setId($field)->setType('file')->html());
-//    } else {
-//        $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//        $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-//    }
-//}
-//
-//$form->addContent(
-//    Html::create('Input')
-//        ->setType('submit')
-//        ->setValue('OK')
-//        ->html()
-//);
-
-//echo Html::create("Pagination")
-//    ->setClass('pagination')
-//    ->setControllerType($type)
-//    ->setPageCount($pageCount)
-//    ->html();
 
 if ($pageCount > 1) {
     echo "<div class='contPag'>";

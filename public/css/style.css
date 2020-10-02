@@ -90,3 +90,19 @@
     color: #ffffff;
     padding: 5px;
 }
+
+.formGroup {
+    display: grid;
+    border-bottom: none;
+}
+
+.hui {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.huiSelect {
+    padding: 3px;
+    margin-left: 12px
+}

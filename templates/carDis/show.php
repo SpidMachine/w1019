@@ -18,9 +18,7 @@ $value['image'] = "<img class='carDisImg' src='images/products/$table[id].$ext'>
     <h1><?= $table['name_of_car'] ?></h1>
     <hr>
     <div id="carDisFlex">
-        <div>
-        <?php
-          >
+        <div style="position: relative">
             <strong id="carDisPrice"><?= $table['price'] . ' р' ?></strong>
             <span style="opacity: 60%; margin-left: 30px">
                 <?php
@@ -29,7 +27,7 @@ $value['image'] = "<img class='carDisImg' src='images/products/$table[id].$ext'>
                     }
                 ?>
             </span>
-            <table style="margin-top: 10px" cellpadding="5px">
+            <table style="margin-top: 10px; position: relative" cellpadding="5px">
                 <tr>
                     <td>
                         <span style="color: #95999c">Дата выпуска</span>

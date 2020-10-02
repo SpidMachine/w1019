@@ -9,7 +9,6 @@
         <form action="<?= $action ?>" method="post">
             <div class="form-group">
                 <h1>Вход</h1>
-                <label for="exampleInputEmail1"></label>
                 <input type="text" class="form-control" name="login" placeholder="Логин">
             </div>
             <div class="form-group">
@@ -22,3 +21,4 @@
         </form>
     </div>
 </div>
+

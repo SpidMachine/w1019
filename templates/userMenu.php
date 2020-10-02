@@ -30,7 +30,7 @@
 <!--                        <a class="nav-link" href="?action=loginform&type=auth">Авторизация</a>-->
 <!--                    </li>-->
                     <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                        <a class="nav-link" href="?action=logout&type=auth">🚪</a>
+                        <a class="nav-link" href="?action=logout&type=auth" style="margin-right: 365px;">Выход</a>
                     </li>
                 </ul>
             </div>

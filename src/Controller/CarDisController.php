@@ -37,4 +37,12 @@ class CarDisController extends AbstractController
             'table' => $this->table->getCar($data['get']['id'])
         ]);
     }
+
+    public function actionGetNameUser(array $data) {
+        $this
+            ->view
+            ->setData([
+               'table' => $this->table->getUserNameByCarId($data['get']['FIO'])
+            ]);
+    }
 }

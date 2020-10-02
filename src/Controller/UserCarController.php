@@ -11,5 +11,9 @@ class UserCarController extends CarController {
         parent::__construct($view);
         $this->view->setFolder('UserProducts');
     }
-    
+
+    public function searchCar() {
+        global $Page;
+        echo '<form method="POST" action="?action=show/'.$Page.'"><label><input type="text" name="text" placeholder="Поиск автомобилей"></label><input type="submit"></form>';
+    }
 }
